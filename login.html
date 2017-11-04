@@ -32,6 +32,40 @@
     }
 
     </style>
+
+    <script>
+    function fun1()
+    {
+      if( document.getElementById("n1").value == "" )
+      {
+         alert( "Please provide your name!" );
+         document.getElementById("n1").focus();
+         return false;
+      }
+
+      if( document.getElementById("n2").value == "" )
+      {
+         alert( "Please provide your unique-id" );
+         document.getElementById("n2").focus();
+         return false;
+      }
+
+      if( document.getElementById("n3").value == "" )
+      {
+         alert( "Please provide your designation!" );
+         document.getElementById("n3").focus();
+         return false;
+      }
+
+      if( document.getElementById("p3").value != "1234")
+      {
+        alert("invalid password!");
+        document.getElementById("p3").focus();
+        return false;
+      }
+      return true;
+    }
+    </script>
   </head>
   <body>
     <header>
@@ -45,9 +79,9 @@
           <li><a href="about.html">About</a></li>
           <li><a href="team.html">Our Team</a></li>
           <li><a href="register.html">Register/Contact Us</a></li>
-          <li  class="current"><a href="projects.html">Projects</a></li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="login.html">Login</a></li>
+          <li  class="current"><a href="login.html">Login</a></li>
         </ul>
       </nav>
       </div>
@@ -61,17 +95,18 @@
         <form>
           <h1>LLTA LOGIN</h1><br>
     <label>
-      <span>Name </span><input id="name" type="text" name="name" />
+      <span>Name </span><input id="n1" type="text" name="name" />
     </label><br><br>
     <label>
-      <span>Unique ID </span><input id="uniqueid" type="text" name="uniqueid" />
+      <span>Unique ID </span><input id="n2" type="text" name="uniqueid" />
     </label><br><br>
     <label>
-      <span>Designation </span><input id="designation" type="text" name="designation" />
+      <span>Designation </span><input id="n3" type="text" name="designation" />
     </label><br><br>
     <label>
-      <span>Password </span><input id="password" type="password" name="password" />
+      <span>Password </span><input id="p3" type="password" name="password" />
     </label><br><br>
+    <input type="submit" name="submit" value="submit" onclick="fun1()">
 
         </form>
         <div id='image2'>
